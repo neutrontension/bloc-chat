@@ -23,7 +23,7 @@
      angular
           //connecting to application, blocChat with dependencies, ui.Router
           //and firebase
-         .module('blocChat', ['ui.router', 'firebase'])
+         .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
          //passing config function through angular config method
          .config(config);
  })();

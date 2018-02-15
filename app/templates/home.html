@@ -1,2 +1,9 @@
 <!-- the 'home' state -->
-<h1>Home Page</h1>
+<div class="sidebar">
+    <div class="sidebar-header">
+        <h1 class="sidebar-title">Bloc Chat</h1>
+    </div>
+    <div class="sidebar-body" ng-repeat="room in home.Rooms">
+        <p class="room-name">{{ room.name }}</p>
+    </div>
+</div>

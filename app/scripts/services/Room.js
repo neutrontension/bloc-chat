@@ -24,6 +24,7 @@
     }
 
     return Room;
+    console.log(Room.all)
   }
 
   angular

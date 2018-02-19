@@ -5,7 +5,7 @@
      //how components get hold of their dependencies.
      //config function with providers injected to define first state which Will
      //hold the main view for the application
-     function config($locationProvider, $stateProvider) {
+     function config($stateProvider, $locationProvider) {
         $locationProvider
              .html5Mode({
                  enabled: true,
@@ -15,15 +15,16 @@
         $stateProvider
             .state('home', {
                 url: '/',
+                //The 'home' state is being designated a controller, HomeCtrl
                 controller: 'HomeCtrl as home',
                 templateUrl: '/templates/home.html'
             });
      }
 
      angular
-          //connecting to application, blocChat with dependencies, ui.Router
+          //connecting to application, dependencies - ui.Router,
           //and firebase
-         .module('blocChat', ['ui.router', 'firebase', 'ui.bootstrap'])
+         .module('blocChat', ['ui.router', 'firebase'])
          //passing config function through angular config method
          .config(config);
  })();

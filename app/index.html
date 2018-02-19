@@ -4,7 +4,7 @@
 <html ng-app="blocChat">
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Bloc Base Project</title>
+    <title>Bloc Chat</title>
     <link rel="stylesheet" href="/styles/main.css">
 </head>
 <body>
@@ -13,7 +13,7 @@
     <!-- Angular -->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 
-    <!-- AngularUI Router: using because it is more flexible and features
+    <!-- UI Router: using because it is more flexible and features
          behaviors not found in the Angular default router. Can be in different
          states that determine what to display when a user navigates to a
          specific route. Will be taking care of replacing the contents of <ui-
@@ -26,8 +26,6 @@
 
      <!-- AngularFire -->
      <script src="https://cdn.firebase.com/libs/angularfire/2.3.0/angularfire.min.js"></script>
-
-     <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
      <script>
        // Initialize Firebase
        var config = {
@@ -35,16 +33,13 @@
          authDomain: "bloc-chat-451c8.firebaseapp.com",
          databaseURL: "https://bloc-chat-451c8.firebaseio.com",
          projectId: "bloc-chat-451c8",
-         storageBucket: "",
+         storageBucket: "bloc-chat-451c8.appspot.com",
          messagingSenderId: "110909237918"
        };
        firebase.initializeApp(config);
      </script>
 
-    <!-- AngularUI Bootstrap -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/2.5.0/ui-bootstrap-tpls.min.js"></script>
-
-    <!-- Application Files -->
+    <!-- Application, Controllers, Services Files -->
     <script src="/scripts/app.js"></script>
     <script src="/scripts/controllers/HomeCtrl.js"></script>
     <script src="/scripts/services/Room.js"></script>

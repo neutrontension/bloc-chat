@@ -21,10 +21,9 @@
     Room.add = function(room) {
         //firebase $add method here
         rooms.$add(room);
-    }
+    };
 
     return Room;
-    console.log(Room.all)
   }
 
   angular

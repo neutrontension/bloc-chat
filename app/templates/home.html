@@ -3,7 +3,21 @@
     <div class="sidebar-header">
         <h1 class="sidebar-title">Bloc Chat</h1>
     </div>
-    <div class="sidebar-body" ng-repeat="room in home.Rooms">
-        <p class="room-all">{{ room.all }}</p>
+    <!-- Registering a new object using the ngRepeat directive,
+    which attaches the HomeCtrl controller to this DOM element.
+    'home' in home.rooms comes from the 'controller as' syntax
+    when the controller was assigned a template and is this state.
+    the 'rooms' in home.rooms is the property that angular will
+    watch for changes. Inside the ngRepeat directive, follows the
+    format, "item in list" -->
+    <div class="sidebar-body" ng-repeat="Room in home.Rooms">
+        <!-- What exists between the {{ }} markup is called an
+        Angular expression, which is similar to a JavaScript
+        expression but differs. It is evaluated against a scope
+        object rather than against a global window. You can use
+        filters within Angular expressions to format data.
+        Conditionals, loops, or exceptions cannot be used in
+        Angular expressions, etc. -->
+        <p class="room-all">{{ Room }}</p>
     </div>
 </div>

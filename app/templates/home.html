@@ -10,7 +10,7 @@
     the 'rooms' in home.rooms is the property that angular will
     watch for changes. Inside the ngRepeat directive, follows the
     format, "item in list" -->
-    <div class="sidebar-body" ng-repeat="Room in home.Rooms">
+    <div class="sidebar-body" ng-repeat="Room in home.rooms">
         <!-- What exists between the {{ }} markup is called an
         Angular expression, which is similar to a JavaScript
         expression but differs. It is evaluated against a scope
@@ -18,6 +18,6 @@
         filters within Angular expressions to format data.
         Conditionals, loops, or exceptions cannot be used in
         Angular expressions, etc. -->
-        <p class="room-all">{{ Room }}</p>
+        <p class="room-all">{{ Room.$value }}</p>
     </div>
 </div>
